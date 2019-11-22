@@ -128,7 +128,7 @@ function generatePassword() {
 
         console.log("All params: " + allParamsPw);
         // securePasscode.textContent = allParamsPw;
-        document.getElementById("passcode").value = allParamsPw;
+        document.getElementById("passcode").value = allParamsPw.join("");
 
     }
 
@@ -142,10 +142,6 @@ function copyToClipboard() {
     alert("Copied the text: " + copyText.value);
   }
 
-  
-//   Questions:
-//   1. How do I remove commas from the generated password?
-//   2. Can you copy text from paragraph to Clipboard, or does this only work with input fields?
 
 
 
