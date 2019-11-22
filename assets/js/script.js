@@ -28,7 +28,7 @@ for(var l = 0; l < 10; l++) {
 };
 
 // Create special characters array
-var specialChars = " ! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~";
+var specialChars = "! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ ` { | } ~";
 var specialCharsList = specialChars.split(" ");
 for(var m = 0; m < specialCharsList.length; m++) {
     
@@ -36,11 +36,11 @@ for(var m = 0; m < specialCharsList.length; m++) {
      
 
 
-
  // -------- CREATE FUNCTIONS
 // -------------------------    
 
 function generatePassword() {
+
     // have them choose a character length
     var lengthAnswer = prompt("Choose password length (must be between 8 and 128 characters)");
     var passLength = parseInt(lengthAnswer);
@@ -53,7 +53,7 @@ function generatePassword() {
     }
     else {
         alert("Please select a character length between 8 and 128.");
-        askCharLength();
+        generatePassword();
     }
 
 
@@ -98,7 +98,7 @@ function generatePassword() {
             askCharType();
         }
 
-        // If all character types are chosen...
+        // If all character types are chosen, then generate random password based on criteria
         var allParams = [];
         var insertElement = function(type) {
             for (i = 0; i < type.length; i++) {
@@ -126,21 +126,21 @@ function generatePassword() {
             allParamsPw.push(allParams[Math.floor(Math.random() * allParams.length)]);
         }
 
+        // Display randomly generated password on page
         console.log("All params: " + allParamsPw);
-        // securePasscode.textContent = allParamsPw;
         document.getElementById("passcode").value = allParamsPw.join("");
-
     }
-
+    
 }
 
+// Copy password to clipboard
 function copyToClipboard() {
     var copyText = document.getElementById("passcode");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
     alert("Copied the text: " + copyText.value);
-  }
+}
 
 
 
