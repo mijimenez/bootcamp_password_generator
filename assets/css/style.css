@@ -10,10 +10,15 @@ body {
     max-width: 600px;
 }
 
-.secure-passcode {
-    padding: 20px 20px 80px;
+.secure-passcode-container {
+    padding: 60px 20px;
+    margin-bottom: 20px;
     border: thin dashed grey;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+#passcode {
+    border: none;
 }
 
 .buttons a {

@@ -15,10 +15,12 @@
             <h4 class="card-header">Password Generator</h4>
             <div class="card-body py-5">
                 <h5 class="card-title">Generate a Password</h5>
-                <p class="card-text secure-passcode rounded">Your Secure Passcode</p>
+                <div class="card-text secure-passcode-container rounded">
+                    <input type="text" value="Your Secure Passcode" id="passcode" class="w-100 text-center">
+                </div>
                 <div class="buttons d-flex flex-column flex-sm-row justify-content-sm-between">
-                    <a href="#" class="btn btn-primary border-0 gen-password-btn">Generate Password</a>
-                    <a href="#" class="btn btn-primary bg-secondary text-white border-0 copy-link-btn">Copy to Clipboard</a>
+                    <a onclick="generatePassword()" href="#" class="btn btn-primary border-0 gen-password-btn">Generate Password</a>
+                    <a onclick="copyToClipboard()" href="#" class="btn btn-primary bg-secondary text-white border-0 copy-link-btn">Copy to Clipboard</a>
                 </div>
             </div>
         </div>
