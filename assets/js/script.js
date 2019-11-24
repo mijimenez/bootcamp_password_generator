@@ -113,7 +113,7 @@ function generatePassword() {
 
         // validate at least one character type was chosen before generating a password
         if (charTypeValidate >= 1) {
-            alert("You chose: " + paramsArray);
+            alert("You chose: " + paramsArray.join(", "));
             alert("Let's generate a password!!!");
         }
         else {
