@@ -19,11 +19,16 @@ body {
 
 #passcode {
     border: none;
+    outline: none;
 }
+
+
 
 .buttons a {
     border-radius: 20px;
+    outline: none;
 }
+
 .buttons a:first-of-type {
     margin-bottom: .5em;
 }
